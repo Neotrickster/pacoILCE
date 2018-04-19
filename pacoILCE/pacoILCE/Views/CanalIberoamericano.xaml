@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             x:Class="pacoILCE.Views.CanalIberoamericano"
+             Title="{Binding Title}" Icon="{Binding Icon}" IsBusy="{Binding IsBusy}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="outerStack" Orientation="Vertical" Spacing="10" Padding="10">
+
+                <Label Text="ILCE Video Player" TextColor="DodgerBlue" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10" VerticalOptions="End">
+
+                <!--<Label Text="Canal Iberoamericano" TextColor="Orange" FontSize="18"/>-->
+
+                <!--<Button x:Name="PlayStopButton" Text="Play" Clicked="PlayStopButton_OnClicked"/>-->
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10" VerticalOptions="End">
+                    <!--<Button  x:Name="CanalButton" Image="canaliberoamericano.png" HorizontalOptions="Center"/>-->
+                    <!--<Image Aspect="AspectFit" Source="facebook.png"/>-->
+                    <Image HorizontalOptions="Start" VerticalOptions="End" Source="canaliberoamericano.png" WidthRequest="70" HeightRequest="70"/>
+                    <Button  x:Name="PlayButton" Image="ic_play.png" IsVisible="True" HorizontalOptions="Center"/>
+                    <Button  x:Name="StopButton" Image="ic_stop.png" IsVisible="False" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout x:Name="innerStack" Orientation="Vertical">
+
+                <!--<StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                    <Label Text="Duración: "/>
+                    <Label x:Name="Duracion"/>
+                    <Label Text="Posición: "/>
+                    <Label x:Name="Posicion"/>
+                    </StackLayout>
+                <ProgressBar x:Name="progress" HeightRequest="10"></ProgressBar>-->
+
+                <forms:VideoView x:Name="MyVideoView"
+                    AspectMode="AspectFit"
+                    WidthRequest="320"
+                    HeightRequest="180"/>
+
+                <Label x:Name="StatusLabel"
+                    BackgroundColor="#88000000" TextColor="White" 
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Aspect="AspectFit" Source="canaliberoamericano.png" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" />
+
+                    <Label Grid.Column="1" Grid.Row="0" 
+                        Text="El Canal Iberoamericano (Ci), señal que nos une, es una iniciativa del Instituto Latinoamericano de la Comunicación Educativa (ILCE) organismo internacional, la Asociación de Televisoras Educativas y Culturales (ATEI) y la Dirección General de Televisión Educativa (DGTVE) de la Secretaría de Educación Pública de México."
+                        LineBreakMode="WordWrap"/>
+
+                    <Label Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" 
+                        Text="El Ci es una ventana audiovisual de difusión de la educación, la ciencia, la cultura y la diversidad de los pueblos iberoamericanos bajo los principios de objetividad, veracidad, ética, pluralidad, equidad, suficiencia, inclusión, oportunidad y con pleno respeto a los derechos fundamentales."
+                        LineBreakMode="WordWrap"/>
+
+                    <Label Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" 
+                        Text="El Ci es una muestra de cooperación y colaboración de televisoras e instituciones culturales y educativas de Iberoamérica que transmiten a través de televisión satelital, televisión pública e internet, esta señal."
+                        LineBreakMode="WordWrap"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             x:Class="pacoILCE.Views.SummaSaberes"
+             Title="{Binding Title}" Icon="{Binding Icon}" IsBusy="{Binding IsBusy}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="outerStack" Orientation="Vertical" Spacing="10" Padding="10">
+
+                <Label Text="ILCE Video Player" TextColor="DodgerBlue" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10" VerticalOptions="End">
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10" VerticalOptions="End">
+                        <Image HorizontalOptions="Start" VerticalOptions="End" Source="canal15.png" WidthRequest="70" HeightRequest="70"/>
+                        <Button  x:Name="PlayButton" Image="ic_play.png" IsVisible="True" HorizontalOptions="Center"/>
+                        <Button  x:Name="StopButton" Image="ic_stop.png" IsVisible="False" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout x:Name="innerStack" Orientation="Vertical">
+                    
+                    <forms:VideoView x:Name="MyVideoView"
+                        AspectMode="AspectFit"
+                        WidthRequest="320"
+                        HeightRequest="180"/>
+
+                    <Label x:Name="StatusLabel"
+                        BackgroundColor="#88000000" TextColor="White" 
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Aspect="AspectFit" Source="canal15.png" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" />
+
+                    <Label Grid.Column="1" Grid.Row="0" 
+                        Text="El Canal 15 (summa saberes), promueve la mejora social, la participación ciudadana al llevar la educación más allá de las aulas para apoyar al individuo en su crecimiento personal."
+                        LineBreakMode="WordWrap"/>
+
+                    <Label Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" 
+                        Text="Horario de transmisión:"
+                        LineBreakMode="WordWrap"/>
+
+                    <Label Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" 
+                        Text="Lunes a viernes 07:00 a 20:00 hrs. Sábados y domingo 07:00 a 14:00 hrs."
+                        LineBreakMode="WordWrap"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

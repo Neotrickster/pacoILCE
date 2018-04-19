@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pacoILCE.AcercaDe"
+             Title="{Binding Title}" Icon="{Binding Icon}" IsBusy="{Binding IsBusy}">
+    <ScrollView>
+        <StackLayout Orientation="Vertical" Spacing="10" Padding="10">
+            <Image Aspect="AspectFit" HeightRequest="60" Source="ilceheader.png"/>
+
+
+            <Label
+                   Text="El Instituto Latinoamericano de la Comunicación Educativa (ILCE), es un organismo internacional con autonomía de gestión, con personalidad o personería jurídica y patrimonio propio, al servicio de América Latina y el Caribe en aquellos campos que le son propios a la Institución. Tiene como objetivos la cooperación regional en la investigación, experimentación, producción y difusión de materiales audiovisuales; la formación y capacitación de recursos humanos en el área de la tecnología educativa; la recopilación de materiales y documentación audiovisuales; y los demás que convengan a los Estados miembros."
+                   LineBreakMode="WordWrap"/>
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand"
+                         Spacing="10">
+
+                <Image x:Name="twitter" Source="twitter.png"/>
+                <Image x:Name="facebook" Source="facebook.png"/>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

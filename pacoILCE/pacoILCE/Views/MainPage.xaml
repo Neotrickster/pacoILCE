@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:pacoILCE"
+             x:Class="pacoILCE.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="ILCE App">
+            <StackLayout Orientation="Vertical">
+                <Button x:Name="BtnAcercaDe" Text="AcercaDe" Clicked="BtnAcercaDe_OnClicked" />
+                <Button x:Name="BtnTwitter" Text="Twitter" Clicked="BtnTwitter_OnClicked"  />
+                <Button x:Name="BtnRadioIlce" Text="Radio ILCE" Clicked="BtnRadioIlce_OnClicked" />
+                <Button x:Name="BtnSummaSaberes" Text="Summa Saberes" Clicked="BtnSummaSaberes_OnClicked" />
+                <Button x:Name="BtnCanalIberoamericano" Text="Canal Iberoamericano" Clicked="BtnCanalIberoamericano_OnClicked" />
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:AcercaDe />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

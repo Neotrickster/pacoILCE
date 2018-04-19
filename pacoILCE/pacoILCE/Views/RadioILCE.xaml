@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             x:Class="pacoILCE.Views.RadioILCE"
+             Title="{Binding Title}" Icon="{Binding Icon}" IsBusy="{Binding IsBusy}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="outerStac" Orientation="Vertical" Spacing="10" Padding="10">
+
+                <Label Text="ILCE Audio Player" TextColor="DodgerBlue" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10" VerticalOptions="End">
+                    <Grid ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image HorizontalOptions="Center" Source="radioilceinverso.png" HeightRequest="56" Aspect="AspectFit"
+                               Grid.Column="0"/>
+                        <!--<BoxView Grid.Column="0" BackgroundColor="Crimson"/>-->
+                        <Button  x:Name="PlayButto" Image="ic_play.png" IsVisible="True" HorizontalOptions="Center"
+                                 Grid.Column="2"/>
+                        <Button  x:Name="StopButto" Image="ic_stop.png" IsVisible="False" HorizontalOptions="Center"
+                                 Grid.Column="2"/>
+                        <forms:VideoView x:Name="MyVideoView" WidthRequest="10" HeightRequest="10"
+                                         Grid.Column="1"/>
+                        <BoxView Grid.Column="1" BackgroundColor="White"/>
+                        <Label x:Name="Posicio" Text="00:00:00" HorizontalOptions="Center" VerticalOptions="Center"
+                               Grid.Column="1"/>
+                        <!--<BoxView Grid.Column="2" BackgroundColor="Chocolate"/>-->
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout x:Name="innerStac" Orientation="Vertical" Spacing="10" VerticalOptions="End">
+
+                    <Label x:Name="StatusLabe"
+                        BackgroundColor="#88000000" TextColor="White" 
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Aspect="AspectFit" Source="radioilce.png" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" />
+
+                        <Label Grid.Column="1" Grid.Row="0" 
+                            Text="Radio ILCE, una radio para el conocimiento, es una estación de radio educativa y cultural para América Latina que transmite contenidos culturales y educativos las 24 horas del día y los 365 días del año, a través de Internet."
+                            LineBreakMode="WordWrap"/>
+
+                        <Label Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" 
+                            Text=""
+                            LineBreakMode="WordWrap"/>
+
+                        <Label Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" 
+                            Text=""
+                            LineBreakMode="WordWrap"/>
+                    </Grid>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
