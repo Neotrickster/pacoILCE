@@ -9,7 +9,7 @@
 
 
             <Label
-                   Text="El Instituto Latinoamericano de la Comunicación Educativa (ILCE), es un organismo internacional con autonomía de gestión, con personalidad o personería jurídica y patrimonio propio, al servicio de América Latina y el Caribe en aquellos campos que le son propios a la Institución. Tiene como objetivos la cooperación regional en la investigación, experimentación, producción y difusión de materiales audiovisuales; la formación y capacitación de recursos humanos en el área de la tecnología educativa; la recopilación de materiales y documentación audiovisuales; y los demás que convengan a los Estados miembros."
+                   Text="El Instituto Latinoamericano de la Comunicación Educativa -ILCE-, es un organismo internacional con autonomía de gestión, con personalidad o personería jurídica y patrimonio propio, al servicio de América Latina y el Caribe en aquellos campos que le son propios a la Institución. Tiene como objetivos la cooperación regional en la investigación, experimentación, producción y difusión de materiales audiovisuales; la formación y capacitación de recursos humanos en el área de la tecnología educativa; la recopilación de materiales y documentación audiovisuales; y los demás que convengan a los Estados miembros."
                    LineBreakMode="WordWrap"/>
 
             <StackLayout Orientation="Horizontal"
